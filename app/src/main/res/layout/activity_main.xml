@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
     android:elevation="7dp"
     tools:context=".MainActivity">
 
@@ -23,69 +24,79 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="372dp"
-        android:layout_height="131dp"
+        android:layout_width="332dp"
+        android:layout_height="122dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginTop="84dp"
         app:cardCornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textview_question"
+            android:layout_width="286dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="TextView" />
+    </androidx.cardview.widget.CardView>
 
     <Button
-
         android:id="@+id/button_false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="36dp"
         android:text="@string/false_txt"
-        app:layout_constraintStart_toEndOf="@+id/imageButton_prev"
+        app:layout_constraintEnd_toStartOf="@+id/button_true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Button_prev"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <Button
         android:id="@+id/button_true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/true_txt"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton_next"
+        app:layout_constraintEnd_toStartOf="@+id/Button_next"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <ImageButton
-
-        android:id="@+id/imageButton_prev"
+        android:id="@+id/Button_prev"
         android:layout_width="54dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
+        android:background="@color/xyzq"
+        android:contentDescription="@string/prev_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:srcCompat="@drawable/baseline_navigate_before_black_24"
-        android:contentDescription="@string/prev_button" />
+        app:srcCompat="@drawable/baseline_navigate_before_black_24" />
 
     <ImageButton
-        android:id="@+id/imageButton_next"
+        android:id="@+id/Button_next"
         android:layout_width="55dp"
         android:layout_height="42dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/xyzq"
+        android:contentDescription="@string/next_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:srcCompat="@drawable/baseline_navigate_next_black_24"
-        android:contentDescription="@string/next_button" />
+        app:srcCompat="@drawable/baseline_navigate_next_black_24" />
 
     <TextView
-        android:textSize="18dp"
-        android:id="@+id/counter_resource"
+        android:id="@+id/textview_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/chewy"
         android:text="@string/counter"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"

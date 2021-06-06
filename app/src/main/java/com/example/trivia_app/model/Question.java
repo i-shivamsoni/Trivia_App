@@ -18,7 +18,7 @@ public class Question {
         this.answer = answer;
     }
 
-    public boolean isAnswerTrue() {
+    public boolean  isAnswerTrue() {
         return answerTrue;
     }
 
